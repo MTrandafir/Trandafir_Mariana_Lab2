@@ -46,15 +46,18 @@
             </Canvas>
         </GroupBox>
         <ListBox x:Name="lstSale" Margin="94,324,278,12"/>
-        <Menu Margin="0,0,666,347">
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
+Width="131" Margin="0,0,666,347">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="Doughnuts" Cursor="Arrow">
                 <MenuItem Header="Make" Cursor="Arrow">
                     <MenuItem Cursor="Arrow" Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed" 
+                                  Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" 
+                                  IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
                     </MenuItem>
                     <MenuItem Header="Filled" Cursor="Arrow">
                         <MenuItem x:Name="lemonMenuItem" Header="Lemon" IsCheckable="False"/>
@@ -62,7 +65,7 @@
                         <MenuItem x:Name="vanillaMenuItem" Header="Vanilla"/>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Stop"/>
+                <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
         </Menu>
     </Grid>
